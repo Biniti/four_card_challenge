@@ -1,0 +1,159 @@
+:root{
+
+    --primary-red:hsl(0, 78%, 62%);
+    --primary-cyan:hsl(180, 62%, 55%);
+    --primary-orange:hsl(34, 97%, 64%);
+    --primary-blue:hsl(212, 86%, 64%);
+
+    --neutral-DarkBlue:hsl(234, 12%, 34%);
+    --neutral-blue:hsl(229, 6%, 66%);
+    --neutral-gray:hsl(0, 0%, 98%);
+
+}
+
+
+*{
+    padding:0;
+    margin:0;
+    
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200 400 600;
+    Font-size: 15px;
+    background-color: var(--neutral-gray);
+}
+
+header{
+   padding:50px 60px;
+}
+
+header h1{
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom:10px;
+}
+
+header .bold{
+    font-weight: bold;
+}
+
+
+
+section{
+    /*background: white;*/
+    background-color: white;
+    margin:30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    
+}
+
+section h2{
+    padding-top:10px;
+}
+
+section  h2, span{
+    display:flex;
+    justify-content: flex-start;
+    margin:10px;
+    margin-left:20px;
+
+}
+
+section  .img{
+    display:flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+    margin-left:230px;
+    padding-bottom:30px;
+    padding-top:10px;
+}
+
+footer{
+    margin-top:30px;
+    background-color: var(--neutral-blue);
+    width:100%;
+    padding-top:10px;
+}
+
+footer a{
+    text-decoration:none;
+    transition: 0.3s;
+}
+
+footer a:hover{
+    color:rgb(1, 24, 1);
+}
+
+ #card-1{
+    border-radius: 5%;  
+    border-top:5px solid var(--primary-cyan);
+    
+}
+
+#card-2{
+    border-radius: 5%;  
+    border-top:5px solid var(--primary-red);
+    
+}
+
+#card-3{
+    border-radius: 5%;  
+    border-top:5px solid var(--primary-orange);
+    
+}
+
+#card-4{
+    border-radius: 5%;  
+    border-top:5px solid var(--primary-blue);
+    
+}
+
+
+
+@media (min-width: 1200px){
+    
+    
+    header{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+     }
+
+     header h1{
+         font-size:30px;
+     }
+
+     header p {
+         width:500px;
+     }
+   
+
+     .sections{     
+        display:flex;
+        flex-direction: row; 
+        justify-content: center;
+        flex-wrap:wrap;
+     }
+
+     #card-1, #card-2, #card-3, #card-4{
+         padding:30px;
+         margin:15px;
+         width:300px;
+     }
+
+     .box-push{
+        transform: translateY(50%); /*Empurra o elemento na posição Y para baixo*/
+    }
+
+    /*As duas tags abaixo servem para inverter a posição 3 e 4*/
+
+    #card-3{
+        order:4; 
+    }
+
+    #card-4{
+        order:3;
+    }
+}
